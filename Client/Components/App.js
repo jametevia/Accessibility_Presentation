@@ -11,6 +11,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div className="NonAccessibleComponentHeader">Inaccessible Component</div>
         <NonAccessibleNav />
         <img id="nonAccessibleJSImage" src={this.state.nonAccessibleImage}></img>
         <div></div>
