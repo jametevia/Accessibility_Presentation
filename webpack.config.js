@@ -11,6 +11,10 @@ const config = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        use: 'url-loader?limit=100000'
+      },
+      {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/
@@ -19,7 +23,8 @@ const config = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'file-loader'
         ]
       }
     ]
