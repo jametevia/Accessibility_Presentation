@@ -1,6 +1,10 @@
-#nonAccessibleJSImage{
+#nonAccessibleJSImage {
   height: 300px;
   width: 300px;
 }
 
 
+.nonAccessibleSelect {
+  height: 20px;
+  width: 100px;
+}
