@@ -14,7 +14,26 @@ class App extends React.Component {
     this.redirect = this.redirect.bind(this);
     this.accessibleImageChange = this.accessibleImageChange.bind(this);
     this.accessibleRedirect = this.accessibleRedirect.bind(this);
+    this.enter = this.enter.bind(this);
+    this.enterTrue = this.enterTrue.bind(this);
    }
+
+  enterTrue(event) {
+    var code = event.charCode || event.keyCode;
+    if ((code === 32) || (code === 13)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+  enter(e) {
+    if (this.enterTrue(e) === true) {
+      this.accessibleRedirect();
+    }
+  }
 
 
   imageChange (e) {
@@ -98,7 +117,7 @@ class App extends React.Component {
           <h1 className="AccessibleComponentHeader">Accessible Component</h1>
           <div className="AccessibleLearn">What would you like to learn?</div>
           <AccessibleNav imageChange={this.accessibleImageChange} />
-          <img tabIndex="0" id="AccessibleJSImage" src={this.state.AccessibleImage} onClick={this.accessibleRedirect} alt={this.state.accessibleImageString}></img>
+          <img tabIndex="0" id="AccessibleJSImage" src={this.state.AccessibleImage} onKeyDown={this.enter} onClick={this.accessibleRedirect} alt={this.state.accessibleImageString}></img>
         </main>
       </div>
 
