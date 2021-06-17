@@ -115,7 +115,7 @@ class App extends React.Component {
 
         <main role="main">
           <h1 className="AccessibleComponentHeader">Accessible Component</h1>
-          <div className="AccessibleLearn">What would you like to learn?</div>
+          <p className="AccessibleLearn">What would you like to learn?</p>
           <AccessibleNav imageChange={this.accessibleImageChange} />
           <img tabIndex="0" id="AccessibleJSImage" src={this.state.AccessibleImage} onKeyDown={this.enter} onClick={this.accessibleRedirect} alt={this.state.accessibleImageString}></img>
         </main>
