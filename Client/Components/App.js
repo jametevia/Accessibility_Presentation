@@ -1,5 +1,6 @@
 import React from 'react';
 import NonAccessibleNav from './nonAccessibleNav.js';
+import AccessibleNav from './AccessibleNav.js';
 import javascriptImage from '../../Images/javascript.png';
 import cssImage from '../../Images/css.png';
 import reactImage from '../../Images/react.jpeg';
@@ -8,7 +9,7 @@ import expressImage from '../../Images/express.png';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {nonAccessibleImage: javascriptImage};
+    this.state = {nonAccessibleImage: javascriptImage, AccessibleImage: javascriptImage};
     this.imageChange = this.imageChange.bind(this);
     this.redirect = this.redirect.bind(this);
    }
@@ -55,10 +56,10 @@ class App extends React.Component {
         <div className="bottomBar"></div>
 
 
-        <h1 className="Accessible Component">Accessible Component</h1>
-        <div className="learn">What would you like to learn?</div>
-        <NonAccessibleNav imageChange={this.imageChange} />
-        <img id="nonAccessibleJSImage" src={this.state.nonAccessibleImage} onClick={this.redirect} alt={this.state.}></img>
+        <h1 className="AccessibleComponentHeader">Accessible Component</h1>
+        <div className="AccessibleLearn">What would you like to learn?</div>
+        <AccessibleNav imageChange={this.imageChange} />
+        <img id="nonAccessibleJSImage" src={this.state.nonAccessibleImage} onClick={this.redirect} alt={this.state.AccessibleImage}></img>
       </div>
 
     );
