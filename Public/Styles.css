@@ -21,6 +21,9 @@
   margin-right: 25%;
   text-align: center;
   padding-bottom: 3%;
+  display: grid;
+  grid-template-rows: 25px 25px;
+  grid-template-columns: 50% 50%;
 }
 
 
@@ -43,22 +46,44 @@
   margin-top: 3%;
   margin-bottom: 3%;
   text-align: center;
+  color: rgb(197, 197, 197);
 }
 
-.nonAccessibleJS {
-  width: 45%;
-  float: left;
-  bottom: 0;
+
+.nonAccessibleExpressLabel {
+  width: 90%;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-color: rgba(0, 162, 255, 0.678);
 }
 
 .nonAccessibleExpress {
-  width: 45%;
-  float: right;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 90%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+}
+
+
+.nonAccessibleJS {
+  width: 90%;
+  height: 100%;
+  margin-left: 0;
+  top: 0;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
 }
 
 .nonAccessibleJSLabel {
-  background-color: red;
+  background-color: rgba(65, 125, 238, 0.705);
   top: 0px;
   height: 30px;
-  width: 45px;
+  width: 90%;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }

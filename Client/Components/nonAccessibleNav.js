@@ -3,12 +3,14 @@ import React from 'react';
 const nonAccessibleNav = (props) => {
   return (
     <div className={"nonAccessibleSelect"}>
-      <label className="nonAccessibleJSLabel">&nbsp;<select className="nonAccessibleJS" onChange={props.imageChange}>
+      <label className="nonAccessibleJSLabel" for="nonAccesibleJS">&nbsp;</label>
+      <select name="nonAccessibleJS" className="nonAccessibleJS" onChange={props.imageChange}>
           <option value="SelectOne">Select One</option>
           <option value="javascript">javascript</option>
           <option value="css">css</option>
-        </select></label>
-      <select className="nonAccessibleExpress" onChange={props.imageChange}>
+      </select>
+      <label className="nonAccessibleExpressLabel" for="nonAccessibleJS">&nbsp;</label>
+      <select name="nonAccessibleExpress" className="nonAccessibleExpress" onChange={props.imageChange}>
         <option value="SelectOne">Select One</option>
         <option value="express">express</option>
         <option value="react">react</option>
