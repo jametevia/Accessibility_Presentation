@@ -58,19 +58,19 @@ class App extends React.Component {
    accessibleImageChange (e) {
     if (e.target.value === 'css') {
       this.setState({AccessibleImage: cssImage})
-      this.setState({AccessibleImageString: 'css Image'})
+      this.setState({accessibleImageString: 'css Image'})
     }
     if (e.target.value === 'react') {
       this.setState({AccessibleImage: reactImage})
-      this.setState({AccessibleImageString: 'react Image'})
+      this.setState({accessibleImageString: 'react Image'})
     }
     if (e.target.value === 'express') {
       this.setState({AccessibleImage: expressImage})
-      this.setState({AccessibleImageString: 'express Image'})
+      this.setState({accessibleImageString: 'express Image'})
     }
     if (e.target.value === 'javascript') {
       this.setState({AccessibleImage: javascriptImage})
-      this.setState({AccessibleImageString: 'javascript Image'})
+      this.setState({accessibleImageString: 'javascript Image'})
     }
    }
 
