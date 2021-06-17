@@ -56,7 +56,8 @@
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 3;
-  background-color: rgba(0, 162, 255, 0.678);
+  background-color: rgba(140, 146, 236, 0.87);
+  color: green;
 }
 
 .nonAccessibleExpress {
@@ -81,9 +82,15 @@
 
 .nonAccessibleJSLabel {
   background-color: rgba(65, 125, 238, 0.705);
+  color: green;
   top: 0px;
   height: 30px;
   width: 90%;
   grid-row-start: 1;
   grid-row-end: 2;
+}
+
+.bottomBar {
+  padding-top: 50px;
+  border-bottom: 3px solid #aaa;
 }

@@ -50,9 +50,15 @@ class App extends React.Component {
       <div>
         <div className="NonAccessibleComponentHeader">Inaccessible Component</div>
         <div className="learn">What would you like to learn?</div>
-        <NonAccessibleNav imageChange={this.imageChange}/>
+        <NonAccessibleNav imageChange={this.imageChange} />
         <img id="nonAccessibleJSImage" src={this.state.nonAccessibleImage} onClick={this.redirect}></img>
-        <div></div>
+        <div className="bottomBar"></div>
+
+
+        <h1 className="Accessible Component">Accessible Component</h1>
+        <div className="learn">What would you like to learn?</div>
+        <NonAccessibleNav imageChange={this.imageChange} />
+        <img id="nonAccessibleJSImage" src={this.state.nonAccessibleImage} onClick={this.redirect} alt={this.state.}></img>
       </div>
 
     );
